@@ -1,8 +1,15 @@
-const MediaItem = ({ item }) => {
-  console.log("item", item);
+const MediaItem = ({ item, setSelectedItem }) => {
   return (
     <tr key={item.filename}>
       <td>
+        <button
+          onClick={() => {
+            console.log("toimiiko?");
+            setSelectedItem(item);
+          }}
+        >
+          Klikkaa auki
+        </button>
         <img src={item.thumbnail} />
       </td>
       <td>{item.title}</td>

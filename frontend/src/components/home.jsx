@@ -1,7 +1,12 @@
 import MediaItem from "./MediaItem";
+import MyComponent from "./MyComponent";
+import SingleView from "./SingleView";
+import { useState } from "react";
 
 const Home = () => {
-  console.log("Hello from home");
+  const [selectedItem, setSelectedItem] = useState(null);
+  //console.log("Hello from home");
+
   const mediaArray = [
     {
       media_id: 8,
@@ -30,7 +35,8 @@ const Home = () => {
       user_id: 2,
       filename:
         "http://distribution.bbb3d.renderfarming.net/video/mp4/bbb_sunflower_1080p_60fps_normal.mp4",
-      thumbnail: "https://placecats.com/300/200",
+      thumbnail:
+        "https://images.unsplash.com/photo-1761839258239-2be2146f1605?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       filesize: 1236616,
       media_type: "video/mp4",
       title: "Bunny",
@@ -54,8 +60,14 @@ const Home = () => {
           </tr>
         </thead>
         <tbody>
+          <MyComponent />
+          <SingleView item={selectedItem} setSelectedItem={setSelectedItem} />
           {mediaArray.map((item) => (
-            <MediaItem key={item.filename} item={item} />
+            <MediaItem
+              key={item.filename}
+              setSelectedItem={setSelectedItem}
+              item={item}
+            />
           ))}
         </tbody>
       </table>
