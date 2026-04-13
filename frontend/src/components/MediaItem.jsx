@@ -1,16 +1,13 @@
-const MediaItem = ({ item, setSelectedItem }) => {
+import { Link } from "react-router";
+
+const MediaItem = ({ item }) => {
   return (
-    <tr key={item.filename}>
+    <tr>
       <td>
-        <button
-          onClick={() => {
-            console.log("toimiiko?");
-            setSelectedItem(item);
-          }}
-        >
-          Klikkaa auki
-        </button>
-        <img src={item.thumbnail} />
+        <Link to="/single" state={{ item }}>
+          <img src={item.thumbnail} alt={item.title} />
+          <div>Klikkaa auki</div>
+        </Link>
       </td>
       <td>{item.title}</td>
       <td>{item.description}</td>
