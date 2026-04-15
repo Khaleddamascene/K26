@@ -4,6 +4,6 @@ import babel from "@rolldown/plugin-babel";
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/~-maraim/K26/routing/",
+  base: "/~maraim/WSK-26-JS-kertaus/routing/",
   plugins: [react(), babel({ presets: [reactCompilerPreset()] })],
 });
