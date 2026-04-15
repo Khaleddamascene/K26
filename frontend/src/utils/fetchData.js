@@ -1,4 +1,4 @@
-/**
+/*
  * Fetches data from a given URL using the Fetch API.
  *
  * @async

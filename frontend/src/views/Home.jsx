@@ -11,8 +11,23 @@ const Home = () => {
   useEffect(() => {
     const getMedia = async () => {
       try {
-        const json = await fetchData("test.json");
-        setMediaArray(json);
+        const media = await fetchData(
+          import.meta.env.VITE_MEDIA_API + "/media",
+        );
+
+        const mediaWithUsers = await Promise.all(
+          media.map(async (item) => {
+            const user = await fetchData(
+              import.meta.env.VITE_AUTH_API + "/users/" + item.user_id,
+            );
+
+            return {
+              ...item,
+              username: user.username,
+            };
+          }),
+        );
+        setMediaArray(mediaWithUsers);
       } catch (error) {
         console.error(error);
       }
@@ -20,6 +35,7 @@ const Home = () => {
 
     getMedia();
   }, []);
+
   console.log(mediaArray);
 
   return (
@@ -28,28 +44,30 @@ const Home = () => {
       <MyComponent />
 
       <SingleView item={selectedItem} setSelectedItem={setSelectedItem} />
-
-      <table>
-        <thead>
-          <tr>
-            <th>Thumbnail</th>
-            <th>Title</th>
-            <th>Description</th>
-            <th>Created</th>
-            <th>Size</th>
-            <th>Type</th>
-          </tr>
-        </thead>
-        <tbody>
-          {mediaArray.map((item) => (
-            <MediaItem
-              key={item.filename}
-              setSelectedItem={setSelectedItem}
-              item={item}
-            />
-          ))}
-        </tbody>
-      </table>
+      <div className="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Thumbnail</th>
+              <th>Title</th>
+              <th>Description</th>
+              <th>Created</th>
+              <th>Size</th>
+              <th>Type</th>
+              <th>User</th>
+            </tr>
+          </thead>
+          <tbody>
+            {mediaArray.map((item) => (
+              <MediaItem
+                key={item.filename}
+                setSelectedItem={setSelectedItem}
+                item={item}
+              />
+            ))}
+          </tbody>
+        </table>
+      </div>
     </>
   );
 };

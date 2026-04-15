@@ -1,3 +1,4 @@
+import "./medialtem.css";
 import { Link } from "react-router";
 
 const MediaItem = ({ item }) => {
@@ -14,6 +15,7 @@ const MediaItem = ({ item }) => {
       <td>{item.created_at}</td>
       <td>{item.filesize}</td>
       <td>{item.media_type}</td>
+      <td>{item.username}</td>
     </tr>
   );
 };

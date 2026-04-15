@@ -1,10 +1,30 @@
-nav ul {
-  display: flex;
-  justify-content: space-evenly;
-  margin: 1em 0;
-  padding: 0 2em;
+nav {
+  background-color: #222;
+  padding: 1rem;
 }
 
-nav ul li {
+nav ul {
   list-style: none;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap; /* 🔥 allows wrapping on mobile */
+  justify-content: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #4dabf7;
+}
+
+/* Mobile tweak */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
 }

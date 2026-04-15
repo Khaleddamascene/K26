@@ -1,0 +1,14 @@
+td img {
+  width: 120px;
+  border-radius: 8px;
+}
+
+td a {
+  text-decoration: none;
+  color: inherit;
+}
+
+td div {
+  font-size: 0.8rem;
+  color: #4dabf7;
+}

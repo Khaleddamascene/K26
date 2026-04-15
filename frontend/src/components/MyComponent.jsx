@@ -1,3 +1,4 @@
+import "./mycomponent.css";
 import { useState } from "react";
 
 const MyComponent = () => {
