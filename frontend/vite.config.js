@@ -4,6 +4,6 @@ import babel from "@rolldown/plugin-babel";
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/~maraim/WSK-26-JS-kertaus/custom-hooks/",
+  base: "/~maraim/K26/custom-hooks/",
   plugins: [react(), babel({ presets: [reactCompilerPreset()] })],
 });
