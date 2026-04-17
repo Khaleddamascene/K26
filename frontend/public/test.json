@@ -1,0 +1,35 @@
+[
+  {
+    "media_id": 1,
+    "user_id": 1,
+    "filename": "https://images.unsplash.com/photo-1533738363-b7f9aef128ce?q=80&w=1035&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "thumbnail": "https://images.unsplash.com/photo-1533738363-b7f9aef128ce?q=80&w=1035&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "filesize": 1236616,
+    "media_type": "video/mp4",
+    "title": "BIG BUCK BUNNY",
+    "description": "Big Buck Bunny is a short computer-animated comedy film by the Blender Institute, part of the Blender Foundation. Like the foundation's previous film Elephants Dream, the film was made using Blender, a free software application for animation made by the same foundation. It was released as an open-source film under Creative Commons License Attribution 3.0. It premiered in the Netherlands and online on 10 April 2008.",
+    "created_at": "2024-01-07T20:48:13.000Z"
+  },
+  {
+    "media_id": 2,
+    "user_id": 1,
+    "filename": "https://images.unsplash.com/photo-1513245543132-31f507417b26?q=80&w=1035&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "thumbnail": "https://images.unsplash.com/photo-1513245543132-31f507417b26?q=80&w=1035&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "filesize": 170469,
+    "media_type": "image/jpeg",
+    "title": "Image 1",
+    "description": "Placeholder technology is a placeholder for technology that is not yet available.",
+    "created_at": "2024-01-07T20:49:34.000Z"
+  },
+  {
+    "media_id": 3,
+    "user_id": 2,
+    "filename": "https://plus.unsplash.com/premium_vector-1721569648469-97f6c6017148?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "thumbnail": "https://plus.unsplash.com/premium_vector-1721569648469-97f6c6017148?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "filesize": 1002912,
+    "media_type": "image/jpeg",
+    "title": "Image 2",
+    "description": "Another placeholder image description. This one is a bit shorter.",
+    "created_at": "2024-01-07T21:32:27.000Z"
+  }
+]
