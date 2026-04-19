@@ -4,6 +4,6 @@ import babel from "@rolldown/plugin-babel";
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/~maraim/K26/forms/",
+  base: "/~maraim/K26/context/",
   plugins: [react(), babel({ presets: [reactCompilerPreset()] })],
 });
