@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
-import { fetchData } from "../utils/fetchData.js";
+
+import { fetchData } from "../utils/fetchData";
 
 const useMedia = (loadMedia = true) => {
   const [mediaArray, setMediaArray] = useState([]);
@@ -32,7 +33,26 @@ const useMedia = (loadMedia = true) => {
       getMedia();
     }
   }, [loadMedia]);
-  return { mediaArray };
+
+  const postMedia = async (file, inputs, token) => {
+    const data = {
+      ...inputs,
+      ...file,
+    };
+
+    const options = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify(data),
+    };
+
+    return await fetchData(import.meta.env.VITE_MEDIA_API + "/media", options);
+  };
+
+  return { mediaArray, postMedia };
 };
 
 const useUser = () => {
@@ -87,4 +107,27 @@ const useAuthentication = () => {
   return { postLogin };
 };
 
-export { useMedia, useUser, useAuthentication };
+const useFile = () => {
+  const postFile = async (file, token) => {
+    const formData = new FormData();
+    formData.append("file", file);
+
+    const fetchOptions = {
+      method: "POST",
+      headers: {
+        // huom tähän ei content-type headeria
+        Authorization: `Bearer ${token}`,
+      },
+      body: formData,
+    };
+
+    return await fetchData(
+      import.meta.env.VITE_UPLOAD_SERVER + "/upload",
+      fetchOptions,
+    );
+  };
+
+  return { postFile };
+};
+
+export { useMedia, useUser, useAuthentication, useFile };
