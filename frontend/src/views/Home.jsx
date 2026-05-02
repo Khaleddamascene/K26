@@ -1,22 +1,22 @@
 import MediaItem from "../components/MediaItem";
+import MyComponent from "../components/MyComponent";
 import SingleView from "../components/SingleView";
 import { useState } from "react";
 import { useMedia } from "../hooks/apiHooks";
 
 const Home = () => {
   const [selectedItem, setSelectedItem] = useState(null);
-<<<<<<< HEAD
 
-=======
->>>>>>> 8059bb5086a9f9d61dfa2ba6e551a315c885f0ac
   const { mediaArray } = useMedia();
 
   return (
     <>
+      <h2>My media</h2>
+      <MyComponent />
+
       <SingleView item={selectedItem} setSelectedItem={setSelectedItem} />
 
       <table>
-<<<<<<< HEAD
         <thead>
           <tr>
             <th>Thumbnail</th>
@@ -28,14 +28,12 @@ const Home = () => {
             <th>Username</th>
           </tr>
         </thead>
-=======
->>>>>>> 8059bb5086a9f9d61dfa2ba6e551a315c885f0ac
         <tbody>
-          {mediaArray.map((mediaItem) => (
+          {mediaArray.map((item) => (
             <MediaItem
-              key={mediaItem.media_id}
-              item={mediaItem}
+              key={item.filename}
               setSelectedItem={setSelectedItem}
+              item={item}
             />
           ))}
         </tbody>
