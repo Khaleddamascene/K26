@@ -17,6 +17,11 @@ const Single = () => {
       <h2>{item.title}</h2>
       <img src={item.filename} alt={item.title} />
       <p>{item.description}</p>
+      <img
+        src={import.meta.env.VITE_MEDIA_API + "/thumbnails/" + item.filename}
+        alt={item.title}
+      />
+      <p>Uploaded by: {item.username}</p>
     </div>
   );
 };
