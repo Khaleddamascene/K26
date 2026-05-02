@@ -7,8 +7,8 @@ const Navigation = () => {
   const { user } = useUserContext();
 
   return (
-    <nav>
-      <ul>
+    <nav className="border-b border-gray-300 mb-4">
+      <ul className="flex gap-4 p-4 *:px-3 *:py-1 *:rounded-md *:transition *:hover:bg-stone-200">
         <li>
           <Link to="/">Home</Link>
         </li>

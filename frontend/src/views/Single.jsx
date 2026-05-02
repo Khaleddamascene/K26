@@ -1,4 +1,5 @@
 import { useLocation, useNavigate } from "react-router";
+import Likes from "../components/Likes";
 
 const Single = () => {
   const { state } = useLocation();
@@ -15,13 +16,10 @@ const Single = () => {
     <div>
       <button onClick={() => navigate(-1)}>Takaisin</button>
       <h2>{item.title}</h2>
+      <p>Owner: {item.username}</p>
       <img src={item.filename} alt={item.title} />
+      <Likes media_id={item.media_id} />
       <p>{item.description}</p>
-      <img
-        src={import.meta.env.VITE_MEDIA_API + "/thumbnails/" + item.filename}
-        alt={item.title}
-      />
-      <p>Uploaded by: {item.username}</p>
     </div>
   );
 };

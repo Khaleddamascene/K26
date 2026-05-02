@@ -15,14 +15,15 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import Single from "./views/Single";
 import Upload from "./views/Upload";
 import { UserProvider } from "./contexts/UserContext";
+import Modify from "./views/Modify";
 
 const App = () => {
   return (
     <BrowserRouter basename={import.meta.env.BASE_URL}>
       <UserProvider>
         <MyProvider>
-          {/*<MyComponentA />
-          <MyComponentB />*/}
+          {/* <MyComponentA />
+          <MyComponentB /> */}
           <Routes>
             <Route element={<Layout />}>
               <Route path="/" element={<Home />} />
@@ -39,6 +40,7 @@ const App = () => {
               />
               <Route path="/upload" element={<Upload />} />
               <Route path="/single" element={<Single />} />
+              <Route path="/modify" element={<Modify />} />
             </Route>
           </Routes>
         </MyProvider>

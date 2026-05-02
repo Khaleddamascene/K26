@@ -10,17 +10,14 @@ const UserProvider = ({ children }) => {
   const { postLogin } = useAuthentication();
   const { getUserByToken } = useUser();
   const navigate = useNavigate();
+  // const location = useLocation();
 
   // login, logout and autologin functions are here instead of components
   const handleLogin = async (credentials) => {
-    try {
-      const loginResult = await postLogin(credentials);
-      localStorage.setItem("token", loginResult.token);
-      setUser(loginResult.user);
-      navigate("/");
-    } catch (e) {
-      console.log(e.message);
-    }
+    const loginResult = await postLogin(credentials);
+    localStorage.setItem("token", loginResult.token);
+    setUser(loginResult.user);
+    navigate("/");
   };
 
   const handleLogout = () => {
