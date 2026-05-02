@@ -1,4 +1,5 @@
 import { useFile, useMedia } from "../hooks/apiHooks";
+import "./upload.css";
 
 import { useNavigate } from "react-router";
 import { useState } from "react";

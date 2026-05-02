@@ -1,0 +1,76 @@
+/* Center the whole form */
+form {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Title */
+h1 {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+
+/* Labels */
+label {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+/* Inputs & textarea */
+input[type="text"],
+textarea,
+input[type="file"] {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+}
+
+/* Focus effect */
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #4a90e2;
+}
+
+/* Image preview */
+img {
+  display: block;
+  margin: 1rem auto;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+}
+
+/* Button */
+button {
+  padding: 0.7rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #4a90e2;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+/* Hover effect */
+button:hover {
+  background-color: #357abd;
+}
+
+/* Disabled button */
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
