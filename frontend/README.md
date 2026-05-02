@@ -1,6 +1,11 @@
 # React + Vite
 
+<<<<<<< HEAD
 Open [link text here] (https://users.metropolia.fi/~maraim/K26/context/)
+=======
+Open [link text here]
+(https://users.metropolia.fi/~maraim/K26/custom-hooks/) to view it in the browser.
+>>>>>>> 8059bb5086a9f9d61dfa2ba6e551a315c885f0ac
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
