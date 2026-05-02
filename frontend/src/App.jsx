@@ -3,12 +3,12 @@ import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router";
 
 import About from "./views/About";
-import Home from "./views/home";
+import Home from "./views/Home";
+import Layout from "./components/Layout";
+import Login from "./views/Login";
 import Profile from "./views/Profile";
 import Single from "./views/Single";
 import Upload from "./views/Upload";
-import Login from "./views/Login";
-import Layout from "./components/Layout";
 
 const App = () => {
   return (
